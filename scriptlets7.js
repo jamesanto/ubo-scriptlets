@@ -6,7 +6,7 @@
     let keyCodes = Array.from(needle1.split('\|').map(e => e.trim()).filter(e => e !== '').map(e => parseInt(e)));
     console.log('kc', keyCodes);
     document.addEventListener("keydown", function(e) {
-        if(keyCodes.indexOf(e.keyCode) !== -1) {
+        if(keyCodes.indexOf(e.keyCode) !== -1 && e.target.selectionStart === undefined) {
             console.log("EEE", e);
             e.preventDefault();
             e.stopPropagation();
