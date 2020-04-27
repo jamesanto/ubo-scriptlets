@@ -1,7 +1,8 @@
-/// addEventListener-defuser-v2.js
-/// alias aeldv2.js
+/// addEventListener-defuser-v3.js
+/// alias aeldv3.js
 (function() {
     let needle1 = '{{1}}';
+    console.log('needle 1 :', needle1);
     if ( needle1 === '' || needle1 === '{{1}}' ) {
         needle1 = '.?';
     } else if ( /^\/.+\/$/.test(needle1) ) {
@@ -11,6 +12,7 @@
     }
     needle1 = new RegExp(needle1);
     let needle2 = '{{2}}';
+    console.log('needle 2 :', needle2);
     if ( needle2 === '' || needle2 === '{{2}}' ) {
         needle2 = '.?';
     } else if ( /^\/.+\/$/.test(needle2) ) {
