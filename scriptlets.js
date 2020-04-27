@@ -23,7 +23,7 @@
         self.EventTarget.prototype.addEventListener,
         {
             apply: function(target, thisArg, args) {
-                console.log(target, thisArg, args);
+                console.log("HELLO", target, thisArg, args, arguments);
                 const type = args[0].toString();
                 const handler = String(args[1]);
                 if (
