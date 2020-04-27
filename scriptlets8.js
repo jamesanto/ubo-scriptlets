@@ -7,7 +7,7 @@
     console.log('kc', keyCodes);
     document.addEventListener("keydown", function(e) {
         if(keyCodes.indexOf(e.keyCode) !== -1 && e.target.selectionStart === undefined) {
-            console.log("EEE", e);
+            console.log("disabling keydown", e);
             e.preventDefault();
             e.stopPropagation();
         }        
